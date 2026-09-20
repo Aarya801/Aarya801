@@ -1,8 +1,8 @@
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/hero-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/hero-mobile.svg">
-  <img src="assets/hero.svg" width="100%" alt="Aarya Lalan — First-year BTech CSE Core, VIT Chennai. Software, AI, systems. Building systems. Exploring AI. Turning ideas into engineering.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="hero-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="hero-still.svg">
+  <source media="(max-width: 600px)" srcset="hero-mobile.svg">
+  <img src="hero.svg" width="100%" alt="Aarya Lalan — First-year BTech CSE Core, VIT Chennai. Software, AI, systems. Building systems. Exploring AI. Turning ideas into engineering.">
 </picture>
 
 <p align="center">
@@ -15,19 +15,19 @@
 I'm **Aarya Lalan**, a first-year **BTech CSE Core student at VIT Chennai**. I work on C++ storage systems, Python data and engineering pipelines, and interfaces for intelligent software. In team projects, my documented contribution is frontend engineering: making complex systems understandable, explorable, and usable.
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/engineering-core-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/engineering-core-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/engineering-core-mobile.svg">
-  <img src="assets/engineering-core.svg" width="100%" alt="Animated 3D engineering core: a perspective cube with orbiting nodes connecting C++, AI, data and software. Decorative visualization.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="engineering-core-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="engineering-core-still.svg">
+  <source media="(max-width: 600px)" srcset="engineering-core-mobile.svg">
+  <img src="engineering-core.svg" width="100%" alt="Animated 3D engineering core: a perspective cube with orbiting nodes connecting C++, AI, data and software. Decorative visualization.">
 </picture>
 
 ## Project universe
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/project-universe-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/project-universe-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/project-universe-mobile.svg">
-  <img src="assets/project-universe.svg" width="100%" alt="Project constellation: MiniDB, DecisionOS, NodeFlow, FinSight-AI, ASTRA-66 and AI Travel Analyst. Open each repository using its linked card below.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="project-universe-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="project-universe-still.svg">
+  <source media="(max-width: 600px)" srcset="project-universe-mobile.svg">
+  <img src="project-universe.svg" width="100%" alt="Project constellation: MiniDB, DecisionOS, NodeFlow, FinSight-AI, ASTRA-66 and AI Travel Analyst. Open each repository using its linked card below.">
 </picture>
 
 **Systems:** [MiniDB](https://github.com/Aarya801/MiniDB) · **Intelligence:** [AI Travel Analyst](https://github.com/Aarya801/vit-chennai-ai-travel-analyst) · **Team projects:** [DecisionOS](https://github.com/SunalSharma/DecisionOS), [NodeFlow](https://github.com/PREMBISOY/nodeflow), [FinSight-AI](https://github.com/PREMBISOY/FinSight-AI) · **Engineering:** [ASTRA-66](https://github.com/Aarya801/ASTRA-66)
@@ -36,8 +36,8 @@ I'm **Aarya Lalan**, a first-year **BTech CSE Core student at VIT Chennai**. I w
 
 <a href="https://github.com/Aarya801/MiniDB">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/minidb-mobile.svg">
-    <img src="assets/cards/minidb.svg" width="100%" alt="MiniDB — personal C++20 storage-engine project. Hash table, write-ahead log, recovery, transactions. Open repository.">
+    <source media="(max-width: 600px)" srcset="minidb-mobile.svg">
+    <img src="minidb.svg" width="100%" alt="MiniDB — personal C++20 storage-engine project. Hash table, write-ahead log, recovery, transactions. Open repository.">
   </picture>
 </a>
 
@@ -46,8 +46,8 @@ I'm **Aarya Lalan**, a first-year **BTech CSE Core student at VIT Chennai**. I w
 A persistent key-value engine for studying storage internals: custom hash table, binary snapshots, checkpoint-aware WAL replay, LRU cache, transactions, and synchronized library access. The tests exercise corruption, torn records, restart recovery, and concurrency. It is educational software with explicit durability and isolation limits.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/minidb-architecture-mobile.svg">
-  <img src="assets/minidb-architecture.svg" width="100%" alt="MiniDB architecture: CLI to parser to Database, with a hash table, LRU cache, WAL and snapshot persistence.">
+  <source media="(max-width: 600px)" srcset="minidb-architecture-mobile.svg">
+  <img src="minidb-architecture.svg" width="100%" alt="MiniDB architecture: CLI to parser to Database, with a hash table, LRU cache, WAL and snapshot persistence.">
 </picture>
 
 [Design decisions](https://github.com/Aarya801/MiniDB/blob/main/docs/DESIGN_DECISIONS.md) · [Recovery contract](https://github.com/Aarya801/MiniDB/blob/main/docs/WAL.md) · [Benchmarks](https://github.com/Aarya801/MiniDB/blob/main/docs/BENCHMARKS.md) · [Build & test workflow](https://github.com/Aarya801/MiniDB/actions/workflows/cpp.yml)
@@ -56,8 +56,8 @@ A persistent key-value engine for studying storage internals: custom hash table,
 
 <a href="https://github.com/PREMBISOY/nodeflow">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/nodeflow-mobile.svg">
-    <img src="assets/cards/nodeflow.svg" width="100%" alt="NodeFlow — collaboration, frontend contributor. React and JavaScript control plane for a shared project-intelligence system. Open repository.">
+    <source media="(max-width: 600px)" srcset="nodeflow-mobile.svg">
+    <img src="nodeflow.svg" width="100%" alt="NodeFlow — collaboration, frontend contributor. React and JavaScript control plane for a shared project-intelligence system. Open repository.">
   </picture>
 </a>
 
@@ -69,8 +69,8 @@ A shared project-intelligence layer for humans and AI agents, with structured ar
 
 <a href="https://github.com/Aarya801/vit-chennai-ai-travel-analyst">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/travel-mobile.svg">
-    <img src="assets/cards/travel.svg" width="100%" alt="AI Travel Analyst — personal Python, CatBoost and Streamlit project. Data cleaning, feature engineering, evaluation and dashboard. Open repository.">
+    <source media="(max-width: 600px)" srcset="travel-mobile.svg">
+    <img src="travel.svg" width="100%" alt="AI Travel Analyst — personal Python, CatBoost and Streamlit project. Data cleaning, feature engineering, evaluation and dashboard. Open repository.">
   </picture>
 </a>
 
@@ -84,8 +84,8 @@ A flight-price pipeline that normalizes inconsistent inputs, builds features, fi
 
 <a href="https://github.com/SunalSharma/DecisionOS">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/decisionos-mobile.svg">
-    <img src="assets/cards/decisionos.svg" width="100%" alt="DecisionOS — collaboration, frontend contributor. React, TypeScript, comparison UX and charts. Open repository.">
+    <source media="(max-width: 600px)" srcset="decisionos-mobile.svg">
+    <img src="decisionos.svg" width="100%" alt="DecisionOS — collaboration, frontend contributor. React, TypeScript, comparison UX and charts. Open repository.">
   </picture>
 </a>
 
@@ -94,16 +94,15 @@ A flight-price pipeline that normalizes inconsistent inputs, builds features, fi
 A scenario-simulation and decision platform built for **Resonance 1.0, PS7**. The team system generates alternatives, checks constraints, ranks outcomes, and explains trade-offs. **My role:** frontend—React UX, comparison views, charts, validation, and API feedback.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/decision-flow-mobile.svg">
-  <img src="assets/decision-flow.svg" width="100%" alt="DecisionOS team flow: input, scenario, simulation, analysis, decision. My contribution is the frontend.">
+  <img src="decision-flow.svg" width="100%" alt="DecisionOS team flow: input, scenario, simulation, analysis, decision. My contribution is the frontend.">
 </picture>
 
 [Team and architecture](https://github.com/SunalSharma/DecisionOS#team) · [My authored commits](https://github.com/SunalSharma/DecisionOS/commits/main/?author=Aarya801)
 
 <a href="https://github.com/PREMBISOY/FinSight-AI">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/finsight-mobile.svg">
-    <img src="assets/cards/finsight.svg" width="100%" alt="FinSight-AI — collaboration, frontend contributor. React and TypeScript research dashboard with agent, evidence and decision-trace panels. Open repository.">
+    <source media="(max-width: 600px)" srcset="finsight-mobile.svg">
+    <img src="finsight.svg" width="100%" alt="FinSight-AI — collaboration, frontend contributor. React and TypeScript research dashboard with agent, evidence and decision-trace panels. Open repository.">
   </picture>
 </a>
 
@@ -117,8 +116,8 @@ An evidence-backed multi-agent financial-intelligence prototype for **HackVerse:
 
 <a href="https://github.com/Aarya801/ASTRA-66">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/cards/astra66-mobile.svg">
-    <img src="assets/cards/astra66.svg" width="100%" alt="ASTRA-66 — personal Python and OpenSCAD engineering project. CAD, analysis and automated validation. Draft airframe study, not flight certified. Open repository.">
+    <source media="(max-width: 600px)" srcset="astra66-mobile.svg">
+    <img src="astra66.svg" width="100%" alt="ASTRA-66 — personal Python and OpenSCAD engineering project. CAD, analysis and automated validation. Draft airframe study, not flight certified. Open repository.">
   </picture>
 </a>
 
@@ -138,27 +137,27 @@ A parametric student airframe study linking CAD, analysis, simulation, drawings,
 ## Engineering stack
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/tech-matrix-mobile.svg">
-  <img src="assets/tech-matrix.svg" width="100%" alt="Systems: C++20, data structures, persistence, CMake and CTest. Intelligence: Python, CatBoost, pandas, scikit-learn, Streamlit and agent interfaces. Software: React, TypeScript, JavaScript, Vite, API clients, Git and CI. Engineering: OpenSCAD and Python validation.">
+  <source media="(max-width: 600px)" srcset="tech-matrix-mobile.svg">
+  <img src="tech-matrix.svg" width="100%" alt="Systems: C++20, data structures, persistence, CMake and CTest. Intelligence: Python, CatBoost, pandas, scikit-learn, Streamlit and agent interfaces. Software: React, TypeScript, JavaScript, Vite, API clients, Git and CI. Engineering: OpenSCAD and Python validation.">
 </picture>
 
 ## Engineering lab
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/systems-map-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/systems-map-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/systems-map-mobile.svg">
-  <img src="assets/systems-map.svg" width="100%" alt="Aarya Core connects systems to MiniDB, intelligence to ML and team interfaces, software to DecisionOS/NodeFlow/FinSight, and engineering validation to ASTRA-66.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="systems-map-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="systems-map-still.svg">
+  <source media="(max-width: 600px)" srcset="systems-map-mobile.svg">
+  <img src="systems-map.svg" width="100%" alt="Aarya Core connects systems to MiniDB, intelligence to ML and team interfaces, software to DecisionOS/NodeFlow/FinSight, and engineering validation to ASTRA-66.">
 </picture>
 
 ## GitHub activity
 
 <a href="https://github.com/Aarya801?tab=overview">
   <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/contributions-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/contributions-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/contributions-mobile.svg">
-    <img src="assets/contributions.svg" width="100%" alt="Actual GitHub contribution calendar: 46 contributions in the captured year, snapshot 2026-09-20. Click for the current GitHub activity record.">
+    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="contributions-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="contributions-still.svg">
+  <source media="(max-width: 600px)" srcset="contributions-mobile.svg">
+    <img src="contributions.svg" width="100%" alt="Actual GitHub contribution calendar: 46 contributions in the captured year, snapshot 2026-09-20. Click for the current GitHub activity record.">
   </picture>
 </a>
 
@@ -169,10 +168,10 @@ This is a **dated snapshot of GitHub's real calendar**, including its actual dai
 **Systems:** studying storage and recovery through MiniDB's completed milestone series. **Engineering:** ASTRA-66's reproducible validation package. **Interfaces:** exploring how decision and agent systems communicate evidence, state, and uncertainty through team projects.
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/terminal-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal-still.svg">
-  <source media="(max-width: 600px)" srcset="assets/terminal-mobile.svg">
-  <img src="assets/terminal.svg" width="100%" alt="Decorative engineering terminal: systems, AI and software; build, test and explain; status building. These are design labels, not runtime logs.">
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="terminal-mobile-still.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="terminal-still.svg">
+  <source media="(max-width: 600px)" srcset="terminal-mobile.svg">
+  <img src="terminal.svg" width="100%" alt="Decorative engineering terminal: systems, AI and software; build, test and explain; status building. These are design labels, not runtime logs.">
 </picture>
 
 <details>
