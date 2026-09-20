@@ -1,4 +1,7 @@
-<img src="hero-static.png" width="100%" alt="Aarya Lalan — First-year BTech CSE Core, VIT Chennai. Software, AI, systems. Building systems. Exploring AI. Turning ideas into engineering.">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="hero-static.png">
+  <img src="hero-reactor-3d.gif" width="100%" alt="Aarya Lalan — First-year BTech CSE Core, VIT Chennai. Software, AI, systems. Building systems. Exploring AI. Turning ideas into engineering.">
+</picture>
 
 <p align="center">
   <a href="#project-universe">PROJECTS</a> &nbsp; / &nbsp;
