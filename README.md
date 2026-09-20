@@ -13,10 +13,8 @@
 I'm **Aarya Lalan**, a first-year **BTech CSE Core student at VIT Chennai**. I work on C++ storage systems, Python data and engineering pipelines, and interfaces for intelligent software. In team projects, my documented contribution is frontend engineering: making complex systems understandable, explorable, and usable.
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="engineering-core-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="engineering-core-still.svg">
-  <source media="(max-width: 600px)" srcset="engineering-core-mobile.svg">
-  <img src="engineering-core.svg" width="100%" alt="Animated 3D engineering core: a perspective cube with orbiting nodes connecting C++, AI, data and software. Decorative visualization.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="engineering-earth-still.png">
+  <img src="engineering-earth.gif" width="100%" alt="Realistic rotating Earth using NASA Blue Marble imagery, showing all continents through a full rotation. C++, AI, data and software surround the globe.">
 </picture>
 
 ## Project universe
