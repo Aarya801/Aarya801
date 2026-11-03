@@ -1,6 +1,6 @@
 # Portfolio interview guide
 
-This guide summarizes the public repositories reviewed on 3 November 2026. It separates personal projects from team work and describes only features visible in the checked-out source and documentation. Test commands are instructions; they are not claims that every command was run for this review.
+This guide summarizes the public repositories and local checkouts reviewed on 4 November 2026. It separates personal projects from team work and describes only features visible in the checked-out source and documentation. Test commands are instructions; they are not claims that every command was run for this review.
 
 ## MiniDB — personal C++20 storage-engine study
 
@@ -37,19 +37,19 @@ This guide summarizes the public repositories reviewed on 3 November 2026. It se
 
 ## AI Travel Analyst — personal Python data project
 
-**Problem and design.** This project cleans a supplied flight-pricing dataset, derives duration, stop, passenger, and date features, trains a CatBoost model, and presents analysis through Streamlit. A separate booking-window analysis compares historical prices across lead-time groups.
+**Problem and design.** This project cleans a supplied flight-pricing dataset, derives duration, stop, passenger, and date features, trains a CatBoost model, and presents analysis through Streamlit. A separate booking-window analysis compares historical prices across lead-time groups. The chronological evaluator is separate from `src/modeling.py`: it groups rows by unique departure date, trains only on the earliest 60% of eligible dates, reports validation/test scores, and compares with a training-median baseline.
 
 **Technologies:** Python, pandas, NumPy, scikit-learn, CatBoost, Plotly, Streamlit, pytest.
 
-**Limits and evaluation status.** `src/modeling.py` trains on every row with a known price and saves a model; it does not implement the README's claimed 80/20 test split or compute the published metrics. The checked-in `artifacts/metrics.json` stores numbers without enough evaluation provenance to call them held-out performance. The dataset has a departure date and booking lead-time field, but no verified booking timestamp; this prevents a faithful prospective, chronological validation of what would have been known at booking time. Historical booking-window medians are descriptive and do not predict future fares.
+**Verified evaluation artifact.** The committed [`artifacts/chronological_evaluation.json`](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/artifacts/chronological_evaluation.json) records dataset SHA-256 `0b41ae9d512c2b6cb83f93ca48f9ff87d51172d1dd3aab13dac37220f982ef3d`, Python 3.11.15, pandas 3.1.0, and CatBoost 1.2.10. Test MAE/RMSE/R² were 13,100.29 / 46,156.53 / 0.6363; the training-median baseline was 54,091.92 / 79,360.87 / -0.0753. These are results on the supplied data and implemented split, not independent or prospective validation. The six-test suite passed locally on the reviewed commit; tests do not establish model quality.
 
-**Tests:** `pytest -q` checks basic cleaning and booking-window output. These tests do not validate model quality. See the [test source](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/tests/test_pipeline.py). A valid model evaluation still needs a documented split, a training-only fit, a test-only score, and a baseline computed on the same split.
+**Limits.** The data has departure dates and a lead-time field but no verified fare quote-observation timestamp. Departure-date ordering does not establish which fare or features would have been available at booking time, cannot rule out temporal leakage, and does not prove prospective fare accuracy. Historical booking-window medians are descriptive, not future advice. Legacy `artifacts/metrics.json` values do not have sufficient provenance to treat them as held-out scores. See the [evaluation protocol](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/docs/EVALUATION.md).
 
 **Likely questions**
 
 - *Why CatBoost?* It supports categorical features directly and can model nonlinear interactions without requiring a large one-hot matrix.
-- *Can you defend the current MAE and R² as test results?* No. Those values are stored in an artifact, but the checked-in training/evaluation path does not show how the evaluation split was made. I would first implement a reproducible split and report its limitations.
-- *Why not call the booking recommendation prospective?* The available data does not provide a verified timestamp for when each fare was observed, so we cannot reconstruct information available at a historical booking decision.
+- *What does the reported test score mean?* It describes this model on later departure-date groups from this dataset. It does not establish fare quote-time validation or future accuracy.
+- *What would make the evaluation more realistic?* Fare quote timestamps and feature-availability records are needed to reconstruct historical booking-time information and prevent temporal leakage.
 
 ## J.A.R.V.I.S. — personal Windows desktop assistant
 
@@ -57,19 +57,19 @@ This guide summarizes the public repositories reviewed on 3 November 2026. It se
 
 **Technologies:** Python, PySide6, SQLite, psutil, Ollama, optional cloud AI, pytest, Windows batch scripts.
 
-**Limits.** This is a personal desktop prototype, not an unrestricted autonomous agent. Windows-specific behavior and optional integrations require testing on a compatible machine. The README's 28-test claim was not independently verified in this review because pytest and PySide6 are not installed in the local environment. The repository also retains an older Perchance browser prototype (`index.html`, `main.pjs`, and PowerShell bridge); its legacy [`docs/SETUP.md`](https://github.com/Aarya801/my-jarvis/blob/main/docs/SETUP.md) describes that older app and does not explain how to install or run the current Python desktop app.
+**Limits.** This is a personal desktop prototype, not an unrestricted autonomous agent. Windows-specific behavior and optional integrations require testing on a compatible machine. The repository retains an older Perchance browser prototype (`index.html`, `main.pjs`, and a PowerShell bridge), separate from the current desktop app. Voice and screen-vision integrations are optional and environment-dependent; the project does not implement multi-document RAG.
 
-**Tests:** The README documents `python -m pytest -v`; the current environment could not run it because required packages are absent. See [test documentation](https://github.com/Aarya801/my-jarvis/blob/main/docs/TESTING.md) and [security model](https://github.com/Aarya801/my-jarvis/blob/main/docs/SECURITY.md).
+**Setup and tests.** Merged PR #2 aligned [`docs/SETUP.md`](https://github.com/Aarya801/my-jarvis/blob/main/docs/SETUP.md) with the current Python/PySide6 app and its optional Ollama/cloud integrations. [`docs/TESTING.md`](https://github.com/Aarya801/my-jarvis/blob/main/docs/TESTING.md) documents 28 tests and `python -m pytest -v`. I could not independently rerun that suite during this profile review because system Python has no pytest installed.
 
 **Likely questions**
 
 - *How are model outputs kept from becoming arbitrary commands?* Tool execution goes through a registry and security/permission checks; an LLM does not directly execute generated shell commands.
 - *What requires human approval?* Medium/high-risk operations are gated by the UI's permission workflow; path containment and protected-process checks are separate policy controls.
-- *What would you fix before calling it release-ready?* Bring the setup and security documentation into line with the current desktop app, then run the documented suite in a clean Windows environment with dependencies installed.
+- *What would you verify before calling it release-ready?* Run the documented test suite in a clean Windows environment and exercise optional integrations on compatible hardware.
 
 ## MedInsight — personal healthcare UI concept
 
-**Problem and design.** MedInsight proposes patient and clinician views that organize fragmented records into timelines and focused document, medication, allergy, lab, and appointment screens. The repository's ZIP contains the screen maps and written UI specifications.
+**Problem and design.** MedInsight proposes patient and clinician views that organize fragmented records into timelines and focused document, medication, allergy, lab, and appointment screens. The public `main` checkout reviewed here is a documentation/archive concept, not a running product. A local branch named `codex/medinsight-documentation` adds organized Markdown specifications, but that branch is not in the checked `origin/main` and is not linked as public content here.
 
 **Technologies:** documentation and interface specifications only in the reviewed archive. The repository does not contain a running React app, API, clinical data model, or screenshots.
 
@@ -86,7 +86,7 @@ This guide summarizes the public repositories reviewed on 3 November 2026. It se
 
 ### DecisionOS — owned by Sunal Sharma
 
-The repository README credits Aarya with frontend work. The checked `main` history includes Aarya's [persistence-status clarification](https://github.com/SunalSharma/DecisionOS/commit/af905dba8146c8d107999af59de38a37d7b63855). The [incident-domain profiles change](https://github.com/SunalSharma/DecisionOS/commit/354eb6b) is on the separate `feature/aarya-frontend` branch, which is 1 commit ahead and 47 behind `main`; it is not part of `main`, and no pull request was found. These are individual contributions inside a team project; they do not establish ownership of the decision engine or the complete application.
+The repository README credits Aarya with frontend work. The checked `main` history includes Aarya's [persistence-status clarification](https://github.com/SunalSharma/DecisionOS/commit/af905dba8146c8d107999af59de38a37d7b63855). The [incident-domain profiles change](https://github.com/SunalSharma/DecisionOS/commit/354eb6b) is on the separate `feature/aarya-frontend` branch, which is 1 commit ahead and 47 behind `main` in the checked remote-tracking refs; it is not part of `main`. Current PR state was not verifiable through the available GitHub connection. These are individual contributions inside a team project; they do not establish ownership of the decision engine or the complete application.
 
 **Technologies:** React, TypeScript, Vite, Tailwind CSS, Recharts; FastAPI, Pydantic, and a Python decision engine are part of the wider project.
 
@@ -97,7 +97,7 @@ The repository README credits Aarya with frontend work. The checked `main` histo
 
 ### FinSight AI — owned by PREMBISOY
 
-The repository history contains Aarya-authored [dashboard work](https://github.com/PREMBISOY/FinSight-AI/commit/63117036320df4658c3350ee0b67debb97052e9a), [frontend integration documentation](https://github.com/PREMBISOY/FinSight-AI/commit/a241389d57d64d1af4912e989f03906dbc0c7e46), and a [contributor-record update](https://github.com/PREMBISOY/FinSight-AI/commit/6746baf4f20f78f6fc5f12e3ace846eba0dbed73). The dashboard commit is on the remote [`codex/financial-command-center` branch](https://github.com/PREMBISOY/FinSight-AI/tree/codex/financial-command-center) and is absent from `main`; its pull request is closed without merging, and the branch is 1 commit ahead and 36 behind `main`. The documented frontend covers agent status, evidence, synthesis, risk context, decision traces, and degraded-data states. The backend and financial-agent work belong to the wider team.
+The repository history contains Aarya-authored [dashboard work](https://github.com/PREMBISOY/FinSight-AI/commit/63117036320df4658c3350ee0b67debb97052e9a), [frontend integration documentation](https://github.com/PREMBISOY/FinSight-AI/commit/a241389d57d64d1af4912e989f03906dbc0c7e46), and a [contributor-record update](https://github.com/PREMBISOY/FinSight-AI/commit/6746baf4f20f78f6fc5f12e3ace846eba0dbed73). The dashboard commit is on the remote [`codex/financial-command-center` branch](https://github.com/PREMBISOY/FinSight-AI/tree/codex/financial-command-center) and is absent from `main`; local remote-tracking refs show it 1 commit ahead and 36 behind `main`. Current PR state was not verifiable through the available GitHub connection. The documented frontend covers agent status, evidence, synthesis, risk context, decision traces, and degraded-data states. The backend and financial-agent work belong to the wider team.
 
 **Technologies:** React, TypeScript, Vite, Tailwind CSS, Recharts, and a FastAPI backend in the wider project.
 
