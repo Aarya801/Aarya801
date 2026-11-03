@@ -51,21 +51,21 @@ This guide summarizes the public repositories reviewed on 3 November 2026. It se
 - *Can you defend the current MAE and R² as test results?* No. Those values are stored in an artifact, but the checked-in training/evaluation path does not show how the evaluation split was made. I would first implement a reproducible split and report its limitations.
 - *Why not call the booking recommendation prospective?* The available data does not provide a verified timestamp for when each fare was observed, so we cannot reconstruct information available at a historical booking decision.
 
-## J.A.R.V.I.S. — personal browser and Windows-bridge project
+## J.A.R.V.I.S. — personal Windows desktop assistant
 
-**Problem and design.** A browser UI combines a Perchance AI runtime, browser voice APIs, persistent browser state, command interpretation, editable text files, and an optional local PowerShell bridge. The bridge is a separate process bound to loopback and authenticates requests with a local token.
+**Problem and design.** The current repository `main` contains a Python/PySide6 Windows desktop app. Its command router separates deterministic registered tools from conversational queries; a security policy constrains file operations, a permission manager gates risky actions, and a SQLite store records tool activity. AI providers include local Ollama and optional cloud support, with offline fallback behavior.
 
-**Technologies:** HTML, JavaScript, browser APIs, Perchance runtime, PowerShell, Windows batch scripts.
+**Technologies:** Python, PySide6, SQLite, psutil, Ollama, optional cloud AI, pytest, Windows batch scripts.
 
-**Limits.** Browser speech features depend on browser support. The assistant's natural-language behavior depends on the external Perchance runtime. The bridge grants sensitive local capabilities and is intended for personal local use, never public-network exposure. The repository's test plan is manual; it is not an automated browser test suite.
+**Limits.** This is a personal desktop prototype, not an unrestricted autonomous agent. Windows-specific behavior and optional integrations require testing on a compatible machine. The README's 28-test claim was not independently verified in this review because pytest and PySide6 are not installed in the local environment. The repository also retains an older Perchance browser prototype (`index.html`, `main.pjs`, and PowerShell bridge); its legacy [`docs/SETUP.md`](https://github.com/Aarya801/my-jarvis/blob/main/docs/SETUP.md) describes that older app and does not explain how to install or run the current Python desktop app.
 
-**Tests:** Follow the [manual matrix](https://github.com/Aarya801/my-jarvis/blob/main/docs/TESTING.md), including boot, voice support, reload persistence, bridge authentication, file operations, timeout, and disconnect behavior.
+**Tests:** The README documents `python -m pytest -v`; the current environment could not run it because required packages are absent. See [test documentation](https://github.com/Aarya801/my-jarvis/blob/main/docs/TESTING.md) and [security model](https://github.com/Aarya801/my-jarvis/blob/main/docs/SECURITY.md).
 
 **Likely questions**
 
-- *Why keep the bridge separate?* It creates an explicit boundary between the public browser UI and privileged local operations, and it can be stopped independently.
-- *Does the token make public exposure safe?* No. Authentication is one safeguard; loopback-only binding and avoiding shared/public network exposure are part of the design assumptions.
-- *What is the AI capability?* The app uses an external runtime and interprets commands; it is not a general autonomous agent and should not be described as one.
+- *How are model outputs kept from becoming arbitrary commands?* Tool execution goes through a registry and security/permission checks; an LLM does not directly execute generated shell commands.
+- *What requires human approval?* Medium/high-risk operations are gated by the UI's permission workflow; path containment and protected-process checks are separate policy controls.
+- *What would you fix before calling it release-ready?* Bring the setup and security documentation into line with the current desktop app, then run the documented suite in a clean Windows environment with dependencies installed.
 
 ## MedInsight — personal healthcare UI concept
 
@@ -86,7 +86,7 @@ This guide summarizes the public repositories reviewed on 3 November 2026. It se
 
 ### DecisionOS — owned by Sunal Sharma
 
-The repository README credits Aarya with frontend work. The checked `main` history includes Aarya-authored commits for [persistence-status clarification](https://github.com/SunalSharma/DecisionOS/commit/af905dba8146c8d107999af59de38a37d7b63855) and [incident-domain profiles](https://github.com/SunalSharma/DecisionOS/commit/354eb6b). These are verifiable individual contributions inside a team project; they do not establish ownership of the decision engine or the complete application.
+The repository README credits Aarya with frontend work. The checked `main` history includes Aarya's [persistence-status clarification](https://github.com/SunalSharma/DecisionOS/commit/af905dba8146c8d107999af59de38a37d7b63855). The [incident-domain profiles change](https://github.com/SunalSharma/DecisionOS/commit/354eb6b) is on the separate `feature/aarya-frontend` branch, which is 1 commit ahead and 47 behind `main`; it is not part of `main`, and no pull request was found. These are individual contributions inside a team project; they do not establish ownership of the decision engine or the complete application.
 
 **Technologies:** React, TypeScript, Vite, Tailwind CSS, Recharts; FastAPI, Pydantic, and a Python decision engine are part of the wider project.
 
@@ -97,7 +97,7 @@ The repository README credits Aarya with frontend work. The checked `main` histo
 
 ### FinSight AI — owned by PREMBISOY
 
-The repository history contains Aarya-authored [dashboard work](https://github.com/PREMBISOY/FinSight-AI/commit/63117036320df4658c3350ee0b67debb97052e9a), [frontend integration documentation](https://github.com/PREMBISOY/FinSight-AI/commit/a241389d57d64d1af4912e989f03906dbc0c7e46), and a [contributor-record update](https://github.com/PREMBISOY/FinSight-AI/commit/6746baf4f20f78f6fc5f12e3ace846eba0dbed73). The dashboard commit is on the remote [`codex/financial-command-center` branch](https://github.com/PREMBISOY/FinSight-AI/tree/codex/financial-command-center) and is absent from `main`; the PR's current state could not be confirmed through the available GitHub read tools. The documented frontend covers agent status, evidence, synthesis, risk context, decision traces, and degraded-data states. The backend and financial-agent work belong to the wider team.
+The repository history contains Aarya-authored [dashboard work](https://github.com/PREMBISOY/FinSight-AI/commit/63117036320df4658c3350ee0b67debb97052e9a), [frontend integration documentation](https://github.com/PREMBISOY/FinSight-AI/commit/a241389d57d64d1af4912e989f03906dbc0c7e46), and a [contributor-record update](https://github.com/PREMBISOY/FinSight-AI/commit/6746baf4f20f78f6fc5f12e3ace846eba0dbed73). The dashboard commit is on the remote [`codex/financial-command-center` branch](https://github.com/PREMBISOY/FinSight-AI/tree/codex/financial-command-center) and is absent from `main`; its pull request is closed without merging, and the branch is 1 commit ahead and 36 behind `main`. The documented frontend covers agent status, evidence, synthesis, risk context, decision traces, and degraded-data states. The backend and financial-agent work belong to the wider team.
 
 **Technologies:** React, TypeScript, Vite, Tailwind CSS, Recharts, and a FastAPI backend in the wider project.
 
