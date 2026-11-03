@@ -1,188 +1,53 @@
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="hero-static.png">
-  <img src="hero-reactor-3d.gif" width="100%" alt="Aarya Lalan — First-year BTech CSE Core, VIT Chennai. Software, AI, systems. Building systems. Exploring AI. Turning ideas into engineering.">
-</picture>
-
 <p align="center">
-  <a href="#project-universe">PROJECTS</a> &nbsp; / &nbsp;
-  <a href="#engineering-stack">STACK</a> &nbsp; / &nbsp;
-  <a href="#github-activity">ACTIVITY</a> &nbsp; / &nbsp;
-  <a href="#contact">CONTACT</a>
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="hero-static.png">
+    <img src="hero-reactor-3d.gif" width="100%" alt="Aarya Lalan, first-year BTech CSE Core student at VIT Chennai, building software and studying systems.">
+  </picture>
 </p>
 
-I'm **Aarya Lalan**, a first-year **BTech CSE Core student at VIT Chennai**. I work on C++ storage systems, Python data and engineering pipelines, and interfaces for intelligent software. In team projects, my documented contribution is frontend engineering: making complex systems understandable, explorable, and usable.
+<p align="center"><strong>Software engineering · systems · AI and data · thoughtful interfaces</strong></p>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="engineering-earth-still.png">
-  <img src="engineering-earth.gif" width="100%" alt="Realistic rotating Earth using NASA Blue Marble imagery, showing all continents through a full rotation. C++, AI, data and software surround the globe.">
-</picture>
+I'm **Aarya Lalan**, a first-year **BTech Computer Science and Engineering (Core) student at VIT Chennai**. I learn by building projects that make their design decisions and limitations inspectable. My projects span a C++20 storage engine, Python data and engineering pipelines, AI-enabled prototypes, and frontend interfaces for decision-support systems.
 
-## Project universe
+## Selected work
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="project-universe-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="project-universe-still.svg">
-  <source media="(max-width: 600px)" srcset="project-universe-mobile.svg">
-  <img src="project-universe.svg" width="100%" alt="Project constellation: MiniDB, DecisionOS, NodeFlow, FinSight-AI, ASTRA-66 and AI Travel Analyst. Open each repository using its linked card below.">
-</picture>
+### Personal projects
 
-**Systems:** [MiniDB](https://github.com/Aarya801/MiniDB) · **Intelligence:** [AI Travel Analyst](https://github.com/Aarya801/vit-chennai-ai-travel-analyst) · **Team projects:** [DecisionOS](https://github.com/SunalSharma/DecisionOS), [NodeFlow](https://github.com/PREMBISOY/nodeflow), [FinSight-AI](https://github.com/PREMBISOY/FinSight-AI) · **Engineering:** [ASTRA-66](https://github.com/Aarya801/ASTRA-66)
+| Project | What it demonstrates |
+|---|---|
+| [MiniDB](https://github.com/Aarya801/MiniDB) | An educational C++20 persistent key-value engine: hash table, snapshots, checkpointed WAL recovery, LRU cache, transactions, and synchronized access. It does not promise power-loss durability or concurrent transaction isolation. [Design decisions](https://github.com/Aarya801/MiniDB/blob/main/docs/DESIGN_DECISIONS.md) · [WAL contract](https://github.com/Aarya801/MiniDB/blob/main/docs/WAL.md) · [Benchmarks](https://github.com/Aarya801/MiniDB/blob/main/docs/BENCHMARKS.md) |
+| [ASTRA-66](https://github.com/Aarya801/ASTRA-66) | A parametric student airframe design with CAD, analysis, simulation, data-only avionics software, and automated validation. It is an educational design; nothing has flown and it is not flight certified. [Engineering method](https://github.com/Aarya801/ASTRA-66/blob/main/documentation/ENGINEERING_METHOD.md) · [Validation](https://github.com/Aarya801/ASTRA-66/blob/main/documentation/VALIDATION.md) · [CAD renders](https://github.com/Aarya801/ASTRA-66/tree/main/images) |
+| [AI Travel Analyst](https://github.com/Aarya801/vit-chennai-ai-travel-analyst) | A Python and Streamlit flight-price analysis project using CatBoost. Its stored metrics do not currently have a reproducible held-out evaluation procedure in the checked-in training code. [Project report](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/docs/PROJECT_REPORT.md) · [Demo guide](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/docs/DEMO_SCRIPT.md) |
+| [J.A.R.V.I.S.](https://github.com/Aarya801/my-jarvis) | A browser-based personal assistant exploring voice APIs, persistent state, command interpretation, and an optional loopback-only Windows bridge. [Architecture](https://github.com/Aarya801/my-jarvis/blob/main/docs/ARCHITECTURE.md) · [Setup](https://github.com/Aarya801/my-jarvis/blob/main/docs/SETUP.md) · [Manual test plan](https://github.com/Aarya801/my-jarvis/blob/main/docs/TESTING.md) |
+| [MedInsight](https://github.com/Aarya801/MedInsight-Healthcare-Platform) · concept | Written patient and clinician interface specifications for organizing health records. The public archive contains documentation only; there is no running application or clinical validation. |
 
-## Systems / C++
+### Team contributions
 
-<a href="https://github.com/Aarya801/MiniDB">
-  <picture>
-    <source media="(max-width: 600px)" srcset="minidb-mobile.svg">
-    <img src="minidb.svg" width="100%" alt="MiniDB — personal C++20 storage-engine project. Hash table, write-ahead log, recovery, transactions. Open repository.">
-  </picture>
-</a>
+| Project | My documented contribution |
+|---|---|
+| [DecisionOS](https://github.com/SunalSharma/DecisionOS) · owned by Sunal Sharma | Frontend work on scenario creation and comparison, charts, and API feedback. I also authored commits for [persistence status](https://github.com/SunalSharma/DecisionOS/commit/af905dba8146c8d107999af59de38a37d7b63855) and [incident-domain selection](https://github.com/SunalSharma/DecisionOS/commit/354eb6b51fab62db8475e77636547baeb68a7c97). |
+| [FinSight AI](https://github.com/PREMBISOY/FinSight-AI) · owned by PREMBISOY | React and TypeScript research dashboard, including agent status, evidence, synthesis, risk, and decision-trace views. [Frontend PR #2](https://github.com/PREMBISOY/FinSight-AI/pull/2), its [contributor branch](https://github.com/PREMBISOY/FinSight-AI/tree/codex/financial-command-center), and the [integration guide](https://github.com/PREMBISOY/FinSight-AI/blob/main/docs/FRONTEND_INTEGRATION.md) document the work; the implementation is not on `main` as of this review. |
 
-**[MiniDB](https://github.com/Aarya801/MiniDB) · Personal project · Owner: Aarya801**
+These are team projects. The descriptions above are limited to my documented contributions and do not imply ownership of the complete systems.
 
-A persistent key-value engine for studying storage internals: custom hash table, binary snapshots, checkpoint-aware WAL replay, LRU cache, transactions, and synchronized library access. The tests exercise corruption, torn records, restart recovery, and concurrency. It is educational software with explicit durability and isolation limits.
+## Engineering interests and tools
 
-<picture>
-  <source media="(max-width: 600px)" srcset="minidb-architecture-mobile.svg">
-  <img src="minidb-architecture.svg" width="100%" alt="MiniDB architecture: CLI to parser to Database, with a hash table, LRU cache, WAL and snapshot persistence.">
-</picture>
+- **Systems:** C++20, data structures, persistence, recovery, CMake, CTest
+- **Python and data:** Python, pandas, NumPy, scikit-learn, CatBoost, Streamlit, pytest
+- **Frontend:** React, TypeScript, JavaScript, Vite, API integration
+- **Engineering software:** OpenSCAD, Python validation and simulation
+- **Workflow:** Git, GitHub Actions, technical writing, reproducible builds
 
-[Design decisions](https://github.com/Aarya801/MiniDB/blob/main/docs/DESIGN_DECISIONS.md) · [Recovery contract](https://github.com/Aarya801/MiniDB/blob/main/docs/WAL.md) · [Benchmarks](https://github.com/Aarya801/MiniDB/blob/main/docs/BENCHMARKS.md) · [Build & test workflow](https://github.com/Aarya801/MiniDB/actions/workflows/cpp.yml)
+I am currently studying storage-engine design, data validation, and ways to make software explain uncertainty and failure clearly.
 
-## AI / intelligent systems
+## Interview preparation
 
-<a href="https://github.com/PREMBISOY/nodeflow">
-  <picture>
-    <source media="(max-width: 600px)" srcset="nodeflow-mobile.svg">
-    <img src="nodeflow.svg" width="100%" alt="NodeFlow — collaboration, frontend contributor. React and JavaScript control plane for a shared project-intelligence system. Open repository.">
-  </picture>
-</a>
+See the [project interview guide](docs/PORTFOLIO_INTERVIEW_GUIDE.md) for architecture, design decisions, limitations, test approaches, and practice questions.
 
-**[NodeFlow](https://github.com/PREMBISOY/nodeflow) · Contribution / collaboration · Owner: PREMBISOY**
+## More about the work
 
-A shared project-intelligence layer for humans and AI agents, with structured architecture, context, decisions, and activity. **My work:** React control-plane views, account and team controls, repository connections, persistent themes, and API integration. The team's Python/FastAPI backend, agent gateway, and PostgreSQL platform provide the wider system.
+- [All public repositories](https://github.com/Aarya801?tab=repositories)
+- [GitHub activity](https://github.com/Aarya801?tab=overview)
+- [Contact](mailto:aaryalalan99@gmail.com)
 
-[My authored commits](https://github.com/PREMBISOY/nodeflow/commits/main/?author=Aarya801) · [Collaboration contract](https://github.com/PREMBISOY/nodeflow/blob/main/docs/frontend-collaboration-contract.md)
-
-<a href="https://github.com/Aarya801/vit-chennai-ai-travel-analyst">
-  <picture>
-    <source media="(max-width: 600px)" srcset="travel-mobile.svg">
-    <img src="travel.svg" width="100%" alt="AI Travel Analyst — personal Python, CatBoost and Streamlit project. Data cleaning, feature engineering, evaluation and dashboard. Open repository.">
-  </picture>
-</a>
-
-**[AI Travel Analyst](https://github.com/Aarya801/vit-chennai-ai-travel-analyst) · Personal project · Owner: Aarya801**
-
-A flight-price pipeline that normalizes inconsistent inputs, builds features, fits CatBoost, and exposes analysis through Streamlit. The repository reports model and baseline evaluation; data quality, validation, and uncertainty are the next engineering questions.
-
-[Project report](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/docs/PROJECT_REPORT.md) · [Demo walkthrough](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/blob/main/docs/DEMO_SCRIPT.md) · [Tests / current CI status](https://github.com/Aarya801/vit-chennai-ai-travel-analyst/actions/workflows/tests.yml)
-
-## Hackathon / team projects
-
-<a href="https://github.com/SunalSharma/DecisionOS">
-  <picture>
-    <source media="(max-width: 600px)" srcset="decisionos-mobile.svg">
-    <img src="decisionos.svg" width="100%" alt="DecisionOS — collaboration, frontend contributor. React, TypeScript, comparison UX and charts. Open repository.">
-  </picture>
-</a>
-
-**[DecisionOS](https://github.com/SunalSharma/DecisionOS) · Contribution / collaboration · Owner: SunalSharma**
-
-A scenario-simulation and decision platform built for **Resonance 1.0, PS7**. The team system generates alternatives, checks constraints, ranks outcomes, and explains trade-offs. **My role:** frontend—React UX, comparison views, charts, validation, and API feedback.
-
-<picture>
-  <img src="decision-flow.svg" width="100%" alt="DecisionOS team flow: input, scenario, simulation, analysis, decision. My contribution is the frontend.">
-</picture>
-
-[Team and architecture](https://github.com/SunalSharma/DecisionOS#team) · [My authored commits](https://github.com/SunalSharma/DecisionOS/commits/main/?author=Aarya801)
-
-<a href="https://github.com/PREMBISOY/FinSight-AI">
-  <picture>
-    <source media="(max-width: 600px)" srcset="finsight-mobile.svg">
-    <img src="finsight.svg" width="100%" alt="FinSight-AI — collaboration, frontend contributor. React and TypeScript research dashboard with agent, evidence and decision-trace panels. Open repository.">
-  </picture>
-</a>
-
-**[FinSight-AI](https://github.com/PREMBISOY/FinSight-AI) · Contribution / collaboration · Owner: PREMBISOY**
-
-An evidence-backed multi-agent financial-intelligence prototype for **HackVerse: Into the Web — Sprint 1**. **My work:** the React/TypeScript research dashboard—agent status, evidence, synthesis, risk views, decision traces, and degraded-data states. The backend agent implementation belongs to the wider team project.
-
-[Merged frontend PR #2](https://github.com/PREMBISOY/FinSight-AI/pull/2) · [Contributor record](https://github.com/PREMBISOY/FinSight-AI/blob/main/docs/CONTRIBUTORS.md) · [Frontend integration](https://github.com/PREMBISOY/FinSight-AI/blob/main/docs/FRONTEND_INTEGRATION.md)
-
-## Engineering / CAD
-
-<a href="https://github.com/Aarya801/ASTRA-66">
-  <picture>
-    <source media="(max-width: 600px)" srcset="astra66-mobile.svg">
-    <img src="astra66.svg" width="100%" alt="ASTRA-66 — personal Python and OpenSCAD engineering project. CAD, analysis and automated validation. Draft airframe study, not flight certified. Open repository.">
-  </picture>
-</a>
-
-**[ASTRA-66](https://github.com/Aarya801/ASTRA-66) · Personal project · Owner: Aarya801**
-
-A parametric student airframe study linking CAD, analysis, simulation, drawings, BOMs, and automated validation. It distinguishes CAD-derived results from calculations, assumptions, and placeholders. **Draft and not flight certified; simulation outputs are not measured flight performance.**
-
-[CAD validation](https://github.com/Aarya801/ASTRA-66/blob/main/documentation/CAD_VALIDATION.md) · [Engineering status](https://github.com/Aarya801/ASTRA-66/blob/main/documentation/ENGINEERING_STATUS.md) · [Existing renders](https://github.com/Aarya801/ASTRA-66/tree/main/images) · [Validation workflow](https://github.com/Aarya801/ASTRA-66/actions/workflows/validation.yml)
-
-<details>
-<summary><strong>More projects / early work</strong></summary>
-
-**[MedInsight Healthcare Platform](https://github.com/Aarya801/MedInsight-Healthcare-Platform)** — owned by Aarya801. A healthcare UI/UX concept for organizing fragmented medical information into patient and doctor timelines. Its public archive contains problem statements, screen maps, and component specifications. React and API integration are future scope; this is design/documentation work, not an implemented clinical application.
-
-</details>
-
-## Engineering stack
-
-<picture>
-  <source media="(max-width: 600px)" srcset="tech-matrix-mobile.svg">
-  <img src="tech-matrix.svg" width="100%" alt="Systems: C++20, data structures, persistence, CMake and CTest. Intelligence: Python, CatBoost, pandas, scikit-learn, Streamlit and agent interfaces. Software: React, TypeScript, JavaScript, Vite, API clients, Git and CI. Engineering: OpenSCAD and Python validation.">
-</picture>
-
-## Engineering lab
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="systems-map-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="systems-map-still.svg">
-  <source media="(max-width: 600px)" srcset="systems-map-mobile.svg">
-  <img src="systems-map.svg" width="100%" alt="Aarya Core connects systems to MiniDB, intelligence to ML and team interfaces, software to DecisionOS/NodeFlow/FinSight, and engineering validation to ASTRA-66.">
-</picture>
-
-## GitHub activity
-
-<a href="https://github.com/Aarya801?tab=overview">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="contributions-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="contributions-still.svg">
-  <source media="(max-width: 600px)" srcset="contributions-mobile.svg">
-    <img src="contributions.svg" width="100%" alt="Actual GitHub contribution calendar: 46 contributions in the captured year, snapshot 2026-09-20. Click for the current GitHub activity record.">
-  </picture>
-</a>
-
-This is a **dated snapshot of GitHub's real calendar**, including its actual daily counts. [Live contributions](https://github.com/Aarya801?tab=overview) · [Public repositories](https://github.com/Aarya801?tab=repositories)
-
-## Currently building
-
-**Systems:** studying storage and recovery through MiniDB's completed milestone series. **Engineering:** ASTRA-66's reproducible validation package. **Interfaces:** exploring how decision and agent systems communicate evidence, state, and uncertainty through team projects.
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="terminal-mobile-still.svg">
-  <source media="(prefers-reduced-motion: reduce)" srcset="terminal-still.svg">
-  <source media="(max-width: 600px)" srcset="terminal-mobile.svg">
-  <img src="terminal.svg" width="100%" alt="Decorative engineering terminal: systems, AI and software; build, test and explain; status building. These are design labels, not runtime logs.">
-</picture>
-
-<details>
-<summary><strong>Future roadmap / intended next steps</strong></summary>
-
-- **MiniDB:** strengthen portability and focused regression coverage while keeping the documented storage-engine scope.
-- **AI Travel Analyst:** investigate the failing CI run, then add time-aware evaluation and uncertainty reporting.
-- **Team projects:** publish reproducible demo walkthroughs with role-specific screenshots and reliable public demo access.
-
-These are plans, not completed features or achievements.
-
-</details>
-
-## Contact
-
-**[GitHub / Aarya801](https://github.com/Aarya801)** &nbsp; · &nbsp; **[aaryalalan99@gmail.com](mailto:aaryalalan99@gmail.com)**
-
-<sub>Build something real. Understand its limits. Make the work inspectable.</sub>
+<sub>Build carefully. Explain the evidence. State the limits.</sub>
